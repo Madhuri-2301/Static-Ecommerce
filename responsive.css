@@ -1,0 +1,148 @@
+/* Base Reset for Responsiveness */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Mobile First Design */
+
+/* Header */
+.navbar {
+    flex-wrap: wrap;
+}
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+    background: #007bff;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 10;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.nav-links a {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hamburger {
+    display: flex;
+}
+
+/* Hero Section */
+.hero {
+    padding: 1rem;
+    height: auto;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1rem;
+}
+
+.cta-button {
+    font-size: 0.9rem;
+}
+
+/* Products Section */
+.products {
+    padding: 1rem;
+}
+
+.product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+/* Cart Modal */
+.cart-content {
+    width: 90%;
+}
+
+/* Newsletter */
+.newsletter input {
+    width: 100%;
+    margin: 0 0 1rem;
+}
+
+.newsletter button {
+    width: 100%;
+}
+
+/* Footer */
+.footer-content {
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Media Queries */
+
+/* Tablets */
+@media (min-width: 600px) {
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background: none;
+        width: auto;
+    }
+
+    .nav-links a {
+        padding: 0.5rem 1rem;
+        border: none;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .footer-content {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+/* Desktops and Larger Screens */
+@media (min-width: 1024px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .hero p {
+        font-size: 1.5rem;
+    }
+
+    .cta-button {
+        font-size: 1.2rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
